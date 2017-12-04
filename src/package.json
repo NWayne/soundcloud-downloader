@@ -1,0 +1,17 @@
+{
+  "name": "soundcloud-downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.9.1"
+  }
+}
