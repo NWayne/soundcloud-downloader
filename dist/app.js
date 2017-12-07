@@ -65,19 +65,17 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__manifest_json__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__manifest_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__manifest_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__images_upload_icon_19px_png__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__images_upload_icon_19px_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__images_upload_icon_19px_png__);
 
 
+__webpack_require__(1);
 
-let hello = document.createElement('p');
-const text = document.createTextNode("hello");
+__webpack_require__(2);
+
+var hello = document.createElement('p');
+var text = document.createTextNode("hello");
 hello.appendChild(text);
 document.body.appendChild(hello);
 
