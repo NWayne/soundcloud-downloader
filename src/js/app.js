@@ -1,5 +1,5 @@
 import '../manifest.json';
-import '../images/upload-icon-19px.png';
+import '../images/download.png';
 
 let hello = document.createElement('p');
 const text = document.createTextNode("hello");
