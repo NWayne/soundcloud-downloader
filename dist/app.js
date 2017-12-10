@@ -72,24 +72,19 @@
 
 __webpack_require__(1);
 
-__webpack_require__(2);
+console.log('asd');
 
-var hello = document.createElement('p');
-var text = document.createTextNode("hello");
-hello.appendChild(text);
-document.body.appendChild(hello);
+window.fetch('https://api.soundcloud.com/resolve.json?url=' + escape(window.location.href) + '&client_id=a3e059563d7fd3372b49b37f00a00bcf').then(function (data) {
+  console.log(data);
+}).catch(function (error) {
+  console.log(error);
+});
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "manifest.json";
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "download.png";
 
 /***/ })
 /******/ ]);
