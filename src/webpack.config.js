@@ -2,10 +2,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './js/app.js',
+  entry: {
+    app: './js/app.js',
+    background: './js/background.js'
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'app.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -21,14 +24,14 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.png$/,
+        test: /\.json$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
         }
       },
       {
-        test: /\.json$/,
+        test: /\.png$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
@@ -37,6 +40,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      chunks: ['app'],
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['background'],
+      filename: 'background.html'
+    })
   ]
 };
