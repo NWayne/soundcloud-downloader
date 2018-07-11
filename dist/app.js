@@ -79,7 +79,7 @@ var startDownload = function startDownload() {
     return resp.json();
   }).then(function (jsonResp) {
     if (jsonResp.id) {
-      var fileName = 'SoundCloud/' + document.getElementsByClassName('fullHero__title')[0].getElementsByClassName('soundTitle__title')[0].getElementsByTagName('span')[0].textContent + '.mp3';
+      var fileName = 'SoundCloud/' + document.getElementsByClassName('soundTitle__titleContainer')[0].getElementsByClassName('soundTitle__title')[0].getElementsByTagName('span')[0].textContent + '.mp3';
 
       var trackID = jsonResp.id.toString();
 
@@ -128,7 +128,7 @@ var createTrackDownloadButton = function createTrackDownloadButton() {
     startDownload();
   };
 
-  document.getElementsByClassName('listenEngagement')[0].getElementsByClassName('sc-button-group')[0].appendChild(button);
+  document.getElementsByClassName('soundActions')[0].getElementsByClassName('sc-button-group')[0].appendChild(button);
 };
 
 var init = function init() {

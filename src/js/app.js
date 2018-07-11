@@ -8,7 +8,7 @@ const startDownload = () => {
   }).then(jsonResp => {
     if (jsonResp.id) {
       const fileName = 'SoundCloud/' +
-        document.getElementsByClassName('fullHero__title')[0]
+        document.getElementsByClassName('soundTitle__titleContainer')[0]
           .getElementsByClassName('soundTitle__title')[0]
           .getElementsByTagName('span')[0]
           .textContent + '.mp3';
@@ -75,7 +75,7 @@ const createTrackDownloadButton = () => {
     startDownload();
   };
 
-  document.getElementsByClassName('listenEngagement')[0].getElementsByClassName('sc-button-group')[0].appendChild(button);
+  document.getElementsByClassName('soundActions')[0].getElementsByClassName('sc-button-group')[0].appendChild(button);
 }
 
 const init = () => {
